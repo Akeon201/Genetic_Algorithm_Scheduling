@@ -283,7 +283,8 @@ def injection(hypotheses, injection_rate):
 # cross_rate - proportion of teachers that will undergo crossover - .25
 # mutate_rate - probability of mutation per teacher - .025 or .05
 # teacher_num - how many teachers are there - 10
-def genetic_algorithm(num_hypotheses, cross_rate, mutate_rate, injection_rate):
+def genetic_algorithm(num_hypotheses, cross_rate, mutate_rate, injection_rate, plateau_generations):
+  print(f"Initializing {num_hypotheses} hypotheses ...")
   hypotheses = initialize_hypotheses(num_hypotheses)
   generation = 1
   best = 0
@@ -327,7 +328,7 @@ def genetic_algorithm(num_hypotheses, cross_rate, mutate_rate, injection_rate):
 
     generation += 1
 
-    if generation - gen_num > 5:
+    if generation - gen_num > plateau_generations:
       break
 
   return best_hypothesis

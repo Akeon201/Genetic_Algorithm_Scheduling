@@ -24,7 +24,7 @@ Install packages
 
 ## Configurations
 
-You can change variables between lines 195 and 204 in main.py for different outcomes.
+You can change variables between lines 195 and 206 (bottom of file) in main.py for different outcomes.
 
 Example of variable configuration:
 
@@ -37,6 +37,8 @@ Example of variable configuration:
     mutate_rate = .3
     # probability of injecting a random hypothesis
     injection_rate = 0.025
+     # The number of generations it takes to stop running and return the best hypothesis
+    plateau_generations = 10
     #################################################################################
 
 ### Note
@@ -48,5 +50,7 @@ Decimal values are treated as percentages.
     Make sure you are in the directory of "main.py". Start the program by typing "python main.py" or "python3 main.py".
 
     It may take a bit of time to generate initial hypotheses. If it is taking too long then decrease the num_hypotheses variable.
+
+    After initializing all hypotheses, the console will display the generation and fitness score, as well as best generation and best fitness score.
 
     

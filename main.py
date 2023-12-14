@@ -194,17 +194,19 @@ if __name__ == '__main__':
 
  #################################################################################
   # Number of hypotheses you want in every generation
-  num_hypotheses = 50
+  num_hypotheses = 20
   # proportion of teachers that will undergo crossover
   cross_rate = 0.25
   # probability of mutation per teacher - .025 or .05
   mutate_rate = .3
   # probability of injecting a random hypothesis
   injection_rate = 0.02
+  # The number of generations it takes to stop running and return the best hypothesis
+  plateau_generations = 10
   #################################################################################
 
   best_hypothesis = genetic_algorithm.genetic_algorithm(
-      num_hypotheses, cross_rate, mutate_rate, injection_rate)
+      num_hypotheses, cross_rate, mutate_rate, injection_rate, plateau_generations)
 
   schedule = populate_schedule_dict(best_hypothesis)
 
