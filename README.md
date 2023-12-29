@@ -1,6 +1,6 @@
 # Scheduling with a Genetic Algorithm
 #### Author: Kenyon Leblanc, Wesley Bafile, David Wolfe
-This project is an implementation of a genetic algorithm to simulated data with contraints and teachers with preferences. 
+In our project, we utilized our genetic algorithm to optimize class scheduling based on data from an Excel (.xlsx) file. This file contained details about available classes, available times, classroom allocations, and professor preferences. The genetic algorithm was designed to mimic human genetic processes in reproduction. A key feature was the crossover rate, where two 'parent' data sets combined to produce a 'child' dataset. This incorporate elements from both parents. Another critical aspect was the mutation rate, which randomly altered a value in the dataset to another valid option, introducing variability and potential improvements in the scheduling. We additionally implemented an injection rate, which is analogous to random death in natural selection. This process randomly replaces existing hypotheses (scheduling plans) with entirely new ones, not derived from any existing 'parent' plans. This approach allowed for the introduction of fresh, potentially advantageous scheduling options into the algorithm the existing hypotheses. It greatly enhances the diversity and robustness of our scheduling solutions. The combination of these elements in our genetic algorithm aimed to efficiently and effectively optimize class scheduling, balancing various constraints and preferences.
 
 ## Requirements
 
